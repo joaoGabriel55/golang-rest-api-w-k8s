@@ -1,7 +1,8 @@
 Install:
 
-kubectl - k8s CLI
-minikube - manage pods services and more
+**kubectl** - k8s CLI
+
+**minikube** - manage pods services and more
 
 ```
 kubectl create namespace <your-namespace>
