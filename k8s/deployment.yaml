@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golang-rest
+  namespace: golang-rest-project
+  labels:
+    app: golang-rest
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: golang-rest
+  template:
+    metadata:
+      labels:
+        app: golang-rest
+    spec:
+      containers:
+        - name: golang-rest
+          image: joaogabriel51/golang-rest:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000

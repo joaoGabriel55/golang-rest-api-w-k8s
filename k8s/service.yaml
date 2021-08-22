@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: golang-rest-service
+  namespace: golang-rest-project
+spec:
+  selector:
+    app: golang-rest
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+      nodePort: 30001
